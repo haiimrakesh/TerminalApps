@@ -3,7 +3,7 @@ namespace TerminalApp.Navigation;
 
 public class Menu : IMenu
 {
-    public IMenu ParentMenu { get; set; }
+    public IMenu ParentMenu { get; private set; }
     public string Header { get; }
     public List<Choice> Choices { get; }
     IEnumerable<Choice> IMenu.Choices => Choices;
